@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	overflow: hidden;
+}
+/*==water css start==*/
+.road{
+	background: url("road.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 352px;
+	position: absolute;
+	bottom: 0;
+	animation: roadMove 25s linear infinite;
+}
+@keyframes roadMove{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x:-1349px;
+	}
+}
+
+
+
+.cloud-1,.cloud-2,.cloud-3{
+	position: absolute;
+	}
+
+.cloud-1{
+    left: -12;
+	top: 5%;
+	animation: cloudMove 10s linear infinite;
+    animation-delay: 7s: 
+}
+.cloud-2{
+	left: -12;
+	top: 14% ;
+	animation: cloudMove 13s linear infinite;
+    
+
+}
+.cloud-3{
+    left: -12;
+	top: 18% ;
+	animation: cloudMove 20s linear infinite;
+    animation-delay: 2s: 
+
+}
+
+@keyframes cloudMove{
+	0%{
+		left: -12%;
+
+	}
+	100%{
+		left: 110%;
+	}
+}
+
+
+
+.sun{
+	position: absolute;
+	left: 10%;
+	top: 8%;
+	animation:sumMove 3s linear infinite; 
+	}
+@keyframes sumMove{
+    0%{
+	   top: 8%;
+    }
+    50%{
+	    top: 4%;
+     }
+    100%{
+	    top:14%;
+    }
+}
+
+
+
+.box{
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	background: url(spritestrip-1536.png);
+	z-index:2;
+	transform:translate(-50%,-50%);
+height: 256px;
+	width:calc(1536px/6);
+	animation: boxMove 1s steps(6)  infinite;
+
+}
+
+@keyframes boxMove{
+	from
+	{
+		background-position: 0;
+	}
+	to
+	{
+		background-position: -1536px;
+	}
+}
+a{
+	hover:red;
+	position: absolute;
+	left: 90%;
+	top: 30%;
+	text-decoration: none;
+}
+
